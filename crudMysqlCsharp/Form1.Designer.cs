@@ -70,6 +70,7 @@
             this.btnDelete.TabIndex = 8;
             this.btnDelete.Text = "Eliminar";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -79,6 +80,7 @@
             this.btnEdit.TabIndex = 7;
             this.btnEdit.Text = "Modificar";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnSave
             // 
@@ -88,6 +90,7 @@
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "Guardar";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtName
             // 
@@ -105,6 +108,7 @@
             // 
             // txtId
             // 
+            this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(187, 52);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(272, 22);
@@ -144,14 +148,16 @@
             this.dgvTotalAlumns.Name = "dgvTotalAlumns";
             this.dgvTotalAlumns.RowHeadersWidth = 51;
             this.dgvTotalAlumns.RowTemplate.Height = 24;
-            this.dgvTotalAlumns.Size = new System.Drawing.Size(361, 255);
+            this.dgvTotalAlumns.Size = new System.Drawing.Size(576, 255);
             this.dgvTotalAlumns.TabIndex = 1;
+            this.dgvTotalAlumns.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTotalAlumns_CellContentClick);
+            this.dgvTotalAlumns.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTotalAlumns_CellDoubleClick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(918, 321);
+            this.ClientSize = new System.Drawing.Size(1146, 321);
             this.Controls.Add(this.dgvTotalAlumns);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
